@@ -19,15 +19,17 @@ public class MyApplication extends Application {
     private static ConsoleReporter reporter = ConsoleReporter.forRegistry(metrics).convertRatesTo(TimeUnit.SECONDS)
             .convertDurationsTo(TimeUnit.MILLISECONDS).build();
 
-    public MyApplication(){
+    public MyApplication() {
         config.getSingletons().add(new InstrumentedResourceMethodDispatchAdapter(metrics));
         config.getClasses().add(ExampleResource.class);
-        reporter.start(30,TimeUnit.SECONDS);
+        reporter.start(30, TimeUnit.SECONDS);
     }
+
     public Set<Class<?>> getClasses() {
         return config.getClasses();
     }
-    public Set<Object> getSingletons(){
+
+    public Set<Object> getSingletons() {
         return config.getSingletons();
     }
 }
