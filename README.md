@@ -113,4 +113,4 @@ Result as :
 #### TODO
 
 * [Influxdb](http://influxdb.com/) other distribute time series database, can instead graphite
-* [metrics](https://dropwizard.github.io/metrics/3.1.0/getting-started/) java metrics lib,use this to monitor your code runtime metrics like count, time and latency ,use this lib to export jersy api metrics to graphite and display metrics related
+* [metrics](https://dropwizard.github.io/metrics/3.1.0/getting-started/) java metrics lib,use this to monitor your code runtime metrics like count, time and latency ,use this lib to export jersy api metrics to graphite and display metrics related (accomplish jersy console report metrics at 2015-01-06, next report data import to graphite)
