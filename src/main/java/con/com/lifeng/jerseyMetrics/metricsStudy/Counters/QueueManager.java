@@ -1,7 +1,6 @@
-package con.com.lifeng.jerseyMetrics.metricsStudy.Conters;
+package con.com.lifeng.jerseyMetrics.metricsStudy.Counters;
 
 import com.codahale.metrics.Counter;
-import com.codahale.metrics.Gauge;
 import com.codahale.metrics.MetricRegistry;
 
 import java.util.Queue;

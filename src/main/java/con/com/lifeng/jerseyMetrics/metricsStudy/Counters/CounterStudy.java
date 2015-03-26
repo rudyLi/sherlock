@@ -1,4 +1,4 @@
-package con.com.lifeng.jerseyMetrics.metricsStudy.Conters;
+package con.com.lifeng.jerseyMetrics.metricsStudy.Counters;
 
 import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;
