@@ -14,13 +14,16 @@ public class QueueManager {
     private final Timer timer;
     public QueueManager(MetricRegistry metrics, String name) {
         queue = new LinkedBlockingQueue<String>();
-        timer = metrics.timer(MetricRegistry.name(QueueManager.class,"insert-speed"));
+        timer = metrics.timer(MetricRegistry.name(QueueManager.class,name,"insert-speed"));
     }
     public void addElement(String a){
+        final Timer.Context context = timer.time();
         queue.offer(a);
-        timer.time();
+        context.stop();
     }
     public void removeElement(){
+        final Timer.Context context = timer.time();
         queue.poll();
+        context.stop();
     }
 }
